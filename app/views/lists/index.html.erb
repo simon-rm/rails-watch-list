@@ -1,7 +1,15 @@
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
+
 <ul>
   <% @lists.each do |list| %>
     <li>
-      <p><%= list.name %></p>
+      <%= link_to list do %>
+        <p><%= list.name %></p>
+        <% end %>
     </li>
   <% end %>
 </ul>
