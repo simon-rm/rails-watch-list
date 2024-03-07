@@ -1,7 +1,7 @@
 class BookmarksController < ApplicationController
   def create
     @bookmark = Bookmark.new bookmark_params :name
-    @bookmark.movie = Movie.find bookmark:movie_id
+    @bookmark.movie = Movie.find bookmark_params :movie_id
     @bookmark.movie_list = params :movie_list_id
     @bookmark.movie = bookm
     if @bookmark.save
