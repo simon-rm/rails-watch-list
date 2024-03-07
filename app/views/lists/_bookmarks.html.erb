@@ -1,0 +1,12 @@
+<ul>
+  <%@list.movies.each do |movie|%>
+  <% bookmark = Bookmark.find_by(list:@list, movie: movie)%>
+    <li>
+      <%= image_tag movie.poster_url, width: 200 %>
+      <p><%= movie.title %></p>
+      <p><%= movie.rating %></p>
+      <p><%= movie.overview %></p>
+      <p><%= bookmark.comment %></p>
+    </li>
+  <% end %>
+</ul>

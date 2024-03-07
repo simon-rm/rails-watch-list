@@ -1,0 +1,9 @@
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list do %>
+        <p><%= list.name %></p>
+        <% end %>
+    </li>
+  <% end %>
+</ul>

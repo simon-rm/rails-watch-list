@@ -1,0 +1,5 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment%>
+  <%= f.select :movie_id, options_for_select(@movies.map { |m| [m.title, m.id] }) %>
+  <%= f.submit %>
+<% end %>
