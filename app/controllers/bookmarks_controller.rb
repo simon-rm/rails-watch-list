@@ -2,10 +2,10 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = Bookmark.new bookmark_params :name
     @bookmark.movie = Movie.find bookmark_params :movie_id
-    @bookmark.movie_list = params :movie_list_id
+    @bookmark.list = params :list_id
     @bookmark.movie = bookm
     if @bookmark.save
-      redirect_to "movie_lists/show"
+      redirect_to "lists/show"
     end
   end
 
